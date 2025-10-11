@@ -1,0 +1,26 @@
+*{
+    outline: 1px solid red;
+    box-sizing: border-box;
+}
+.heading{
+    color: aquamarine;
+    font-size: 54px;
+    font-weight: 600;
+    text-align: center;
+    
+}
+.paragraphs{
+    color:blue;
+    font-size: 24px;
+    height:200px;
+    width:200px;
+    padding:10px;
+    background-color: bisque;
+    border-radius: 12px;;
+    margin: 0 auto;
+    text-align: center;
+}
+.lists{
+    color:blueviolet;
+    font-size: 24px;
+}

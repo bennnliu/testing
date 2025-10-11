@@ -1,0 +1,88 @@
+body{
+    background-color: #213140;
+    margin:0;
+    padding:0;
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: normal;
+}
+header{
+    margin:0;
+    padding:0;
+    background-color: white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: white;
+    color: red;
+
+}
+
+.navright{
+    font-size: 1rem;
+    margin-left: auto; 
+    display: flex;      
+    gap: 1rem;          
+    align-items: center;
+    color:black;
+    padding:0 4rem;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+    padding: 0.25rem 0.5rem;
+}
+
+.introduction {
+  position: relative;
+  background-image: url('../media/home.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 800px;
+  width: 100%;
+
+}
+
+.introduction::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.introduction > * {
+  position: relative;
+  z-index: 2;
+  
+}
+.introtitle{
+    padding-top:50px;
+    color:white;
+    text-align: center;
+    font-size: 56px;;
+}
+.subtitle{
+    font-size: 30px;;
+}
+.introbuttons{
+    margin:0 auto;
+}
+.lister{
+    border-radius: 8px;
+    font-size: 24px;;
+    background-color: red;
+    color: white;;
+}
+.buyer{
+    border-radius: 8px;
+     font-size: 24px;;
+    background-color: white;
+    color: red;
+}
