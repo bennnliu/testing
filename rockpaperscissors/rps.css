@@ -1,0 +1,51 @@
+*{
+    background-color: beige;
+    font-family: Rockwell;
+    margin:0;
+    padding:0;
+}
+header{
+    padding-top:25px;
+    text-align: center;
+}
+.input{
+    display:flex;
+    justify-content: center;
+    margin:100px;
+    gap:100px;
+}
+
+.input button{
+    padding:25px 50px;
+    background-color:rgb(237, 215, 171);
+    border:2px solid rgb(198, 173, 123) ;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor:pointer;
+    max-width: 200px;
+    min-height: 80px;
+}
+
+.input button:hover{
+     background-color:rgb(214, 182, 116);
+}
+
+.result, .output, .score{
+    text-align: center;
+    font-size: 24px;
+}
+
+.score span{
+    margin:0 100px;
+
+}
+
+#wins{
+    color:green;
+}
+#losts{
+    color:red;
+}
+#ties{
+    color:rgb(176, 176, 7);
+}
