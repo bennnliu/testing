@@ -1,88 +1,175 @@
 body{
-    background-color: #213140;
+    background-color: #f9fafb;
     margin:0;
     padding:0;
-    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-family: Bahnschrift;
     font-weight: normal;
 }
-header{
-    margin:0;
-    padding:0;
-    background-color: white;
+header {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255,); /* Light transparent background */
+  z-index: 10;                           /* Ensures it’s above everything else */
 }
 
-.navbar{
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    background-color: white;
-    color: red;
-
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: white; /* Change to white since background image is dark */
 }
 
-.navright{
-    font-size: 1rem;
-    margin-left: auto; 
-    display: flex;      
-    gap: 1rem;          
-    align-items: center;
-    color:black;
-    padding:0 4rem;
+.navbar a {
+  text-decoration: none;
+  color: red;
+  padding: 0.40rem 0.5rem;
+  transition: color 0.3s ease;
+  border-radius: 8px;
+}
+.navbar a:hover{
+    color:darkred;
+    background-color: rgb(255, 192, 203, 0.15);
 }
 
-.navbar a{
-    text-decoration: none;
-    color: inherit;
-    padding: 0.25rem 0.5rem;
+.navright {
+  font-size: 1rem;
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 0 2rem;
 }
+
 
 .introduction {
   position: relative;
   background-image: url('../media/home.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 800px;
+  min-height: 750px;
   width: 100%;
-
 }
+
 
 .introduction::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.6); 
   z-index: 1;
 }
 
 .introduction > * {
   position: relative;
   z-index: 2;
-  
 }
 .introtitle{
-    padding-top:50px;
+    padding-top:80px;
     color:white;
     text-align: center;
-    font-size: 56px;;
+    font-size: 72px;;
 }
 .subtitle{
-    font-size: 30px;;
+    padding-top:0;
+    font-size: 24px;;
 }
 .introbuttons{
-    margin:0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 5rem;
+   
+    
 }
-.lister{
-    border-radius: 8px;
-    font-size: 24px;;
-    background-color: red;
-    color: white;;
+/* General button styling */
+.lister, .buyer {
+  border-radius: 8px;
+  font-size: 24px;
+  width:15em;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.2;
 }
-.buyer{
-    border-radius: 8px;
-     font-size: 24px;;
-    background-color: white;
-    color: red;
+
+/* Colors */
+.lister {
+  background-color: red;
+  color: white;
+}
+
+.buyer {
+  background-color: white;
+  color: red;
+}
+
+/* Font styling for lines inside buttons */
+.btn-main {
+  display: block;
+  font-size: 1em;  /* Bigger first line */
+  font-weight: bold;
+}
+
+.btn-sub {
+  display: block;
+  font-size: 0.8em;  /* Smaller second line */
+  font-weight: normal;
+}
+.description{
+    text-align: center;
+}
+.description h1{
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    font-size: 56px;
+    font-weight: 300;
+}
+.description p{
+     margin-top: 0;
+    font-size:20px;
+    font-weight: 350;
+    color:gray;
+    margin-bottom: 3em
+}
+.features1, .features2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1500px;
+}
+
+.feature {
+  border: 2px solid rgb(184, 184, 184);
+  cursor:pointer;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin:10px 24px;
+  background-color: white;
+  min-height: 200px; /* 🔹 Forces consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+.feature:hover{
+    border-color: red;
+
+}
+.featurestitle{
+    display:block;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+.featuresdescription{
+    display:block;
+    font-size:14px;
+    color:gray;
 }
